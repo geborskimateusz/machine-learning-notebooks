@@ -19,6 +19,6 @@ class CombinedAttributesAdder(BaseEstimator, TransformerMixin):
             bedrooms_per_room = X[:, bedrooms_ix] / X[:, rooms_ix]
             return np.c_[X, rooms_per_household, population_per_household, bedrooms_per_room]
         else:
-            return np.c_[X, rooms_per_household, bedrooms_per_room]
+            return np.c_[X, rooms_per_household, population_per_household]
 
         
